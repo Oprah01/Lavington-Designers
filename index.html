@@ -1,186 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Lavington Designers Limited</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="whyus.html">Why Us</a>
-    <a href="contacts.html">Contacts</a>
-    <a href="projects.html">Projects</a>
-    <button id="theme-toggle">🌙</button>
-  </nav>
-  
-<section class="home">
-  <img src="assets/logo.png" alt="Lavington Designers Logo" class="logo">
- <div class="hero">
-  <!-- This div holds your background image and does the motion -->
-  <div class="hero-bg"></div>
-  
-  <!-- Your text stays on top -->
-  <div class="hero-content">
-    <h1>Welcome to Lavington Designers</h1>
-    <p>We design with creativity and precision</p>
-    <button>Design work</button>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Lavington Designers Limited — creative design and digital experiences."><title>Lavington Designers Limited | Home</title><link rel="stylesheet" href="style.css"></head><body>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html"><img src="assets/logo.png" alt="Lavington Designers logo"><span>Lavington Designers Limited</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="whyus.html">Why Us</a><a href="projects.html">Projects</a><a href="contacts.html">Contact</a>
+    </div>
+    <div class="nav-actions"><button class="icon-btn" id="theme-toggle" aria-label="Toggle theme">🌙</button><button class="menu-btn" aria-label="Open menu">☰</button></div>
   </div>
-</div>
-  
-</section>
-
-
-  
-
-  <section class="chatbot">
-    <h2>Chat with op 🤖</h2>
-    <div id="chat-window"></div>
-    <input id="chat-input" placeholder="Type your message...">
-    <button onclick="sendMessage()">Send</button>
-    <div class="chatbot" id="chatbot" style="display:none;">
-  <h3>Chat with Op 🤖</h3>
-  <div id="chat-window"></div>
-  <input id="chat-input" placeholder="Type your message...">
-  <button onclick="sendMessage()">Send</button>
-</div>
-  </section>
-   <!--about-->
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>About Us - Lavington Designers Limited</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body class="light">
-  
-
-  <section>
-    <h1>About Us</h1>
-    <p>Lavington Designers is a creative agency specializing in modern design solutions for businesses and individuals.</p>
-    <img src="assets/about.jpg" class="motion-img" alt="About image">
-  </section>
-
-  
-</body>
-</html>
-
-  <!--whyus-->
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Why Us - Lavington Designers</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body class="light">
-
-
-  <section class="whyus">
-    <h1>Why Choose Lavington Designers?</h1>
-    <div class="reasons">
-      <div class="reason-card motion-img">
-        <h2>✨ Creativity</h2>
-        <p>We deliver unique designs tailored to your brand identity.</p>
-      </div>
-      <div class="reason-card motion-img">
-        <h2>👩‍💻 Expertise</h2>
-        <p>Our team has years of experience in design and development.</p>
-      </div>
-      <div class="reason-card motion-img">
-        <h2>💰 Value</h2>
-        <p>Affordable pricing with no compromise on quality.</p>
-      </div>
-      <div class="reason-card motion-img">
-        <h2>⏱️ Reliability</h2>
-        <p>We respect deadlines and deliver on time, every time.</p>
-      </div>
-    </div>
-  </section>
-  <script src="script.js"></script>
-</body>
-</html>
-  <!--PROJECTS-->
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Projects - Lavington Designers</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body class="dark">
-  
-
-  <section>
-    <h1>Our Projects</h1>
-
-    <!-- Project filter buttons -->
-    <div class="project-buttons">
-      <button onclick="showProjects('recent')">Recent Projects</button>
-      <button onclick="showProjects('big')">Big Projects</button>
-      <button onclick="showProjects('past')">Past Projects</button>
-    </div>
-
-    <!-- Project galleries -->
-    <div id="recent" class="project-gallery">
-      <img src="assets/UGENYA1.jpeg" class="motion-img" alt="Recent Project 1">
-      <img src="assets/rico1.jpeg" class="motion-img" alt="Recent Project 2">
-    </div>
-
-    <div id="big" class="project-gallery" style="display:none;">
-      <img src="assets/UGENYA2.jpeg" class="float-img" alt="Big Project 1">
-      <img src="assets/rico2.jpeg" class="float-img" alt="Big Project 2">
-      <img src="assets/UGENYA3.jpeg" class="float-img" alt="Big Project 3">
-    </div>
-
-    <div id="past" class="project-gallery" style="display:none;">
-      <img src="assets/UGENYA3.jpeg" class="slide-img" alt="Past Project 1">
-      <img src="assets/rico3.jpeg" class="slide-img" alt="Past Project 2">
-    </div>
-  </section>
-
-  
-<script src="script.js"></script>
-</body>
-</html>
-
-
-     <!--contacts-->
-     <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Contact Us - Lavington Designers</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body class="light">
-  
-
-  <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <div class="contact-options">
-                <div class="contact-card">
-                    <div class="contact-icon">📱</div>
-                    <h3>WhatsApp</h3>
-                    <p>+254 742 205 023</p>
-                    <a href="https://wa.me/254742205023" class="contact-btn" target="_blank">
-                        Send Message
-                    </a>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon">✉️</div>
-                    <h3>Email</h3>
-                    <p>oprahjoy01@gmail.com</p>
-                    <a href="mailto:oprahjoy01@gmail.com" class="contact-btn">
-                        Send Email
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <script src="script.js"></script>
-</body>
-</html>
+</nav>
+<main>
+<section class="hero"><div class="hero-media" aria-hidden="true"></div><div class="hero-content">
+<span class="eyebrow">Creative design studio</span><h1>Ideas that look good, feel right and stay memorable.</h1><p>Welcome to Lavington Designers Limited. We bring thoughtful visual design, digital experiences and creative direction together to help ideas stand out.</p>
+<div class="hero-actions"><a class="btn btn-primary" href="projects.html">Explore our work →</a><a class="btn btn-ghost" href="contacts.html">Start a conversation</a></div>
+</div></section>
+<section class="section reveal"><div class="container"><div class="section-head"><div><span class="eyebrow">Selected work</span><h2>A visual-first approach to every project.</h2></div><p>Our portfolio brings together different styles and visual directions. Explore the full collection to see more.</p></div>
+<div class="intro-grid"><article class="feature-card"><img src="assets/UGENYA3.jpeg" alt="Featured Lavington Designers project" loading="lazy"><div class="feature-copy"><span class="eyebrow">Featured</span><h3>Design with a clear point of view.</h3><p>From the first idea to the final presentation, we focus on composition, clarity and a distinctive visual identity.</p></div></article>
+<div class="mini-grid"><img src="assets/rico3.jpeg" alt="Rico project" loading="lazy"><img src="assets/UGENYA5.jpeg" alt="Ugenya project" loading="lazy"><img src="assets/rico4.jpeg" alt="Rico project detail" loading="lazy"><img src="assets/UGENYA6.jpeg" alt="Ugenya project detail" loading="lazy"></div></div></div></section>
+<section class="section"><div class="container"><div class="statement reveal"><span class="eyebrow">Our philosophy</span><h2>Good design is not decoration. It is communication.</h2><p>We combine creativity with intention, creating work that is visually confident while staying useful, understandable and relevant to its audience.</p></div></div></section>
+<section class="section reveal"><div class="container"><div class="section-head"><div><span class="eyebrow">What we do</span><h2>Creative services built around your idea.</h2></div></div><div class="service-grid">
+<article class="service-card"><span class="service-number">01</span><h3>Brand & Visual Design</h3><p>Visual identities, layouts and creative direction shaped around a clear message.</p></article>
+<article class="service-card"><span class="service-number">02</span><h3>Digital Experiences</h3><p>Modern, responsive web experiences designed to feel polished on every screen.</p></article>
+<article class="service-card"><span class="service-number">03</span><h3>Creative Presentation</h3><p>Strong imagery, composition and presentation that make your work easier to appreciate.</p></article>
+</div></div></section>
+<section class="section reveal"><div class="container"><div class="section-head"><div><span class="eyebrow">The collection</span><h2>See the work in full.</h2></div><a class="btn btn-primary" href="projects.html">View all projects</a></div></div></section>
+</main><footer class="footer"><div class="container footer-inner"><p>© 2026 Lavington Designers Limited. All rights reserved.</p><p>Creative work with purpose, detail and character.</p></div></footer><script src="script.js"></script></body></html>

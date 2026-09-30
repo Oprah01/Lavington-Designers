@@ -58,3 +58,53 @@ function showProjects(type) {
 
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  const body = document.body;
+  const menu = document.querySelector('.menu-btn');
+  const nav = document.querySelector('.nav-links');
+  const theme = document.querySelector('#theme-toggle');
+  if (menu && nav) menu.addEventListener('click', () => nav.classList.toggle('open'));
+  if (theme) {
+    const saved = localStorage.getItem('lavington-theme');
+    if (saved === 'dark') body.classList.add('dark-mode');
+    theme.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌙';
+    theme.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      const dark = body.classList.contains('dark-mode');
+      theme.textContent = dark ? '☀️' : '🌙';
+      localStorage.setItem('lavington-theme', dark ? 'dark' : 'light');
+    });
+  }
+  const current = location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    if (link.getAttribute('href') === current) link.classList.add('active');
+  });
+  const reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => entries.forEach(e => {
+      if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); }
+    }), {threshold:.12});
+    reveals.forEach(el => observer.observe(el));
+  } else reveals.forEach(el => el.classList.add('visible'));
+
+  document.querySelectorAll('.filter-btn').forEach(btn => btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.project-card').forEach(card => {
+      card.style.display = filter === 'all' || card.dataset.group === filter ? '' : 'none';
+    });
+  }));
+  const lightbox = document.querySelector('.lightbox');
+  const lightboxImage = document.querySelector('.lightbox img');
+  const closeLightbox = () => { if(lightbox) lightbox.classList.remove('open'); };
+  document.querySelectorAll('[data-lightbox]').forEach(card => card.addEventListener('click', () => {
+    if(!lightbox || !lightboxImage) return;
+    lightboxImage.src = card.dataset.lightbox;
+    lightboxImage.alt = card.dataset.alt || 'Project image';
+    lightbox.classList.add('open');
+  }));
+  document.querySelector('.lightbox-close')?.addEventListener('click', closeLightbox);
+  lightbox?.addEventListener('click', e => { if(e.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', e => { if(e.key === 'Escape') closeLightbox(); });
+});
