@@ -1,0 +1,350 @@
+/* Global Theme */
+body.light {
+  background: #ffffff;   /* white background */
+  color: #000000;        /* black text */
+}
+body.dark {
+  background: #000000;   /* black background */
+  color: #ffffff;        /* white text */
+}
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: flex-start; /* pushes links to the left */
+  gap: 15px;
+  padding: 10px;
+  background: #ff6600;         /* orange bar */
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffffff;              /* white links */
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #000000;              /* black on hover */
+}
+
+#theme-toggle {
+  margin-left: auto;           /* keeps the toggle button on the far right */
+  background: #ffffff;
+  color: #ff6600;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#theme-toggle:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+
+
+/* Sections */
+section {
+  padding: 40px;
+  text-align: center;
+}
+h1, h2 {
+  color: #ff6600;        /* orange headings */
+}
+
+/* Motion Images */
+.motion-img {
+  width: 300px;
+  transition: transform 0.5s ease;
+  border: 3px solid #ff6600;
+  border-radius: 8px;
+}
+.motion-img:hover {
+  transform: scale(1.1) rotate(3deg);
+}
+
+/* Floating Animation */
+.float-img {
+  width: 300px;
+  border: 3px solid #ff6600;
+  border-radius: 8px;
+  animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Slide-In Animation */
+.slide-img {
+  width: 300px;
+  opacity: 0;
+  border: 3px solid #ff6600;
+  border-radius: 8px;
+  animation: slideIn 1.5s ease forwards;
+}
+@keyframes slideIn {
+  from { transform: translateX(-100px); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
+}
+
+/* Why Us Cards */
+.reason-card {
+  background: #ffffff;
+  color: #000000;
+  border: 2px solid #ff6600;
+  border-radius: 8px;
+  padding: 20px;
+  width: 200px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: transform 0.4s ease;
+}
+
+.reason-card:hover {
+  transform: scale(1.05) rotate(2deg);
+}
+
+/* Chatbot Box */
+.logo {
+  display: block;
+  text-align: left;
+           /* makes logo clickable */
+}
+
+.chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ffffff;
+  border: 2px solid #ff6600;
+  border-radius: 10px;
+  padding: 15px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  font-family: Arial, sans-serif;
+}
+
+
+/* Chat window */
+#chat-window {
+  height: 200px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  padding: 5px;
+  background: #fff7f0; /* light orange tint */
+  border-radius: 8px;
+}
+
+/* Message bubbles */
+.user-msg {
+  background: #ff6600;   /* orange bubble */
+  color: white;
+  padding: 8px 12px;
+  border-radius: 15px 15px 0 15px;
+  margin: 5px;
+  text-align: right;
+  display: inline-block;
+}
+.bot-msg {
+  background: #ffffff;   /* white bubble */
+  color: #000000;
+  padding: 8px 12px;
+  border-radius: 15px 15px 15px 0;
+  margin: 5px;
+  text-align: left;
+  display: inline-block;
+  border: 1px solid #ff6600;
+}
+
+/* Input + button */
+#chat-input {
+  width: 70%;
+  padding: 5px;
+  border: 1px solid #ff6600;
+  border-radius: 5px;
+}
+.chatbot button {
+  background: #ff6600;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.chatbot button:hover {
+  background: #000000;
+  color: #ffffff;
+}
+.project-buttons {
+  margin: 20px 0;
+}
+
+.project-buttons button {
+  background: #ff6600;   /* orange */
+  color: #ffffff;        /* white text */
+  border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.project-buttons button:hover {
+  background: #000000;   /* black hover */
+  color: #ffffff;
+}
+
+.project-gallery {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+/* Contact Section */
+.contact {
+    background: #f8f9fa;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background: #2980b9;
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    section {
+        padding: 60px 0;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+}
+.contact-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #e9ecef;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.contact-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.contact-card h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.contact-card p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.contact-btn {
+    display: inline-block;
+    background: #25D366;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.contact-btn:hover {
+    background: #128C7E;
+    transform: scale(1.05);
+}
+
+/* Email button specific style */
+.contact-card:nth-child(2) .contact-btn {
+    background: #3498db;
+}
+
+.contact-card:nth-child(2) .contact-btn:hover {
+    background: #2980b9;
+}
+
+.home {
+ 
+  background-size: cover;       /* makes the image fill the section */
+  background-position: center;  /* centers the image */
+  background-repeat: no-repeat; /* prevents tiling */
+  min-height: 100vh;            /* full screen height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;               /* white text for contrast */
+  
+  background-image: url("assets/plumber.jpg");
+
+}

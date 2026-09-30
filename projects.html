@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Projects - Lavington Designers</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="whyus.html">Why Us</a>
+    <a href="contacts.html">Contacts</a>
+    <a href="projects.html">Projects</a>
+    <button id="theme-toggle">🌙</button>
+  </nav>
+
+  <section>
+    <h1>Our Projects</h1>
+
+    <!-- Project filter buttons -->
+    <div class="project-buttons">
+      <button onclick="showProjects('recent')">Recent Projects</button>
+      <button onclick="showProjects('big')">Big Projects</button>
+      <button onclick="showProjects('past')">Past Projects</button>
+    </div>
+
+    <!-- Project galleries -->
+    <div id="recent" class="project-gallery">
+      <img src="assets/UGENYA1.jpeg" class="motion-img" alt="Recent Project 1">
+      <img src="assets/rico1.jpeg" class="motion-img" alt="Recent Project 2">
+    </div>
+
+    <div id="big" class="project-gallery" style="display:none;">
+      <img src="assets/UGENYA2.jpeg" class="float-img" alt="Big Project 1">
+      <img src="assets/rico2.jpeg" class="float-img" alt="Big Project 2">
+      <img src="assets/UGENYA3.jpeg" class="float-img" alt="Big Project 3">
+    </div>
+
+    <div id="past" class="project-gallery" style="display:none;">
+      <img src="assets/UGENYA3.jpeg" class="slide-img" alt="Past Project 1">
+      <img src="assets/rico3.jpeg" class="slide-img" alt="Past Project 2">
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
